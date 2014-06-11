@@ -1,0 +1,159 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 03.06.2014, 11:36:47
+    Author     : Philipp
+*/
+
+
+#videocontainer { 
+    position: absolute; 
+    width: 100%; 
+    height: 100%; 
+    overflow: hidden; 
+}
+
+#videoplayer { 
+    position: absolute; 
+    width: 100%;
+}
+
+#videopage {
+    padding:0;
+    margin:0;
+    background-color: black;
+}
+
+body {
+    background-color: white;
+    padding-left: 0px;
+    
+}
+
+
+.row { 
+    max-width: 100%; 
+}
+
+.showtile {
+    min-height: 25.01em;
+    max-height: 25.01em;
+    //overflow:hidden;
+    float: left;
+    //padding: 1em;
+    margin: 0.5em;
+    //border: solid;
+    //border-width: 1px;
+    //border-color: steelblue;
+    background-color:#f6f6f6;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    
+    color: white;
+    position: relative;
+    
+    
+}
+
+.showtile p {
+    padding-left: 1em;
+    padding-right: 1em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration: none;
+    font-size: 1em;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.showtitletext {
+
+    bottom: 0;
+    width: 100%;
+    background-color: #003366;
+}
+
+.showtile h2 {
+    padding: 0.5em;
+    margin-top: 0em;
+    color: black;
+    font-size: 1.3em;
+    font-family: 'Fira Sans', sans-serif;
+    
+}
+
+.tab-bar {
+    background: black;
+}
+
+.off-canvas-wrap {
+    height: 100%;
+    overflow-y: auto;
+} 
+.inner-wrap {
+    min-height: 100%; 
+}
+
+.left-off-canvas-menu {
+    background: grey;
+}
+
+p, h1 {
+    color: black;
+}
+
+
+@media only screen and (max-width: 40em) { 
+    .showtile {
+        width: 100%;
+        margin: 0px;
+    }
+    .showtitletext {
+        position: absolute;
+    }
+    .small-12 {
+        padding: 0px;
+    }
+}
+
+@media only screen and (min-width: 40.063em) {
+    .main-section {
+        padding-left: 8%;
+    }    
+    .showtile {
+        width: 28%;
+    }
+}
+
+@media only screen and (min-width: 64.063em) { 
+    .main-section {
+        padding-left: 8%;
+    }    
+    .showtile {
+        width: 21%;
+    }
+}
+
+@media only screen and (min-width: 90.063em) { 
+    .main-section {
+        padding-left: 7.5%;
+    }    
+    .showtile {
+        width: 17%;
+    }
+
+}
+
+@media only screen and (min-width: 120.063em) { 
+    .main-section {
+            padding-left: 7.5%;
+    }        
+    .showtile {
+        border: solid;
+        border-color: brown;
+        width: 9%;
+
+    }
+} 
