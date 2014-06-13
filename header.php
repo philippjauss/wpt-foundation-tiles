@@ -7,7 +7,17 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutorial theme</title>
+    <title>
+        <?php wp_title('&laquo;',true,'right');
+            if (!is_home()) echo "";
+            bloginfo('name'); ?>
+    </title>
+    <meta name="copyright" content="Copyright (c) 2014 -
+          <?php echo date("Y");?>, <?php bloginfo('name');?>
+          "/>
+    <meta name="description" content="
+          <?php bloginfo('description');?>
+          "/>
     <!-- If you are using CSS version, only link these 2 files, you may add app.css to use for your overrides if you like. -->
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/normalize.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/foundation.css">    
@@ -15,6 +25,8 @@
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
     <link href='http://fonts.googleapis.com/css?family=Fira+Sans:300' rel='stylesheet' type='text/css'>
     <script src="<?php echo get_template_directory_uri(); ?>/js/vendor/modernizr.js"></script>    
+    
+    <?php wp_head(); ?>
 </head>
 <body>
 <div class="off-canvas-wrap" data-offcanvas>
