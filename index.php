@@ -2,11 +2,13 @@
 
         <div class="row">
             <div class="small-12 large-12 columns">
+                <div id="container">
 
 
                 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                     <a href="<?php the_permalink(); ?>" rel="bookmark">
-                        <div class="showtile">
+                        <div class="postintro">
+                            <div class="postexcerpt">
                              
                             <?php 
                                 if ( has_post_thumbnail() ) {
@@ -16,27 +18,20 @@
                                     wft_article_dummyimage();
                                 }
                             ?>
-                            <h1>
-                                <?php the_title(); ?>
-                            </h1>
-                            <h4>Posted on 
-                                <?php the_time('F jS, Y'); ?>
-                            </h4>
+                            <h1><?php the_title(); ?></h1>
+                            <h4><?php the_time('F jS, Y'); ?></h4>
                             <?php $excerpt = get_the_excerpt(); ?>
-                            <p>
-                                <?php echo string_limit_words($excerpt,25) . " ...";?>
-                            </p>
+                            <p><?php echo string_limit_words($excerpt,25) . " ...";?></p>
+                            </div>
                         </div>
                     </a>
                     
                 <?php endwhile; else: ?>
-                        <div class="showtile">
-                            <p>
-                                <?php _e('Sorry, keine Posts gefunden.'); ?>
-                            </p>
-                        </div>
+                    <div class="postintro">
+                        <p><?php _e('Sorry, keine Posts gefunden.'); ?></p>
+                    </div>
                 <?php endif; ?>
-                
+                </div>
             </div>
         </div>
 

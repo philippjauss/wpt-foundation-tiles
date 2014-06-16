@@ -13,7 +13,7 @@
 
 
         <div class="row">
-            <div class="small-12 large-12 columns">
+            <div class="small-12 large-6 large-offset-3 columns">
                 <div id="post" class="single">
 
                 <?php if (have_posts()) : 
@@ -21,11 +21,11 @@
                     
                     
                     <div <?php post_class();?> id="post-<?php the_ID();?>">
-                        <h3>
+                        <h1>
                             <a href="<?php the_permalink(); ?>" rel="bookmark">
                                 <?php the_title();?>
                             </a>
-                        </h3>
+                        </h1>
                         <div class="postcontent">
                             <?php the_content();?>
                             

@@ -9,8 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
         <?php wp_title('&laquo;',true,'right');
-            if (!is_home()) echo "";
-            bloginfo('name'); ?>
+            if (!is_home()) { echo "";} else {
+            bloginfo('name'); }?>
     </title>
     <meta name="copyright" content="Copyright (c) 2014 -
           <?php echo date("Y");?>, <?php bloginfo('name');?>
@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/foundation.css">    
     
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
-    <link href='http://fonts.googleapis.com/css?family=Fira+Sans:300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
     <script src="<?php echo get_template_directory_uri(); ?>/js/vendor/modernizr.js"></script>    
     
     <?php wp_head(); ?>
@@ -37,7 +37,7 @@
       </section>
 
       <section class="middle tab-bar-section">
-        <h1 class="title">Blogtitle@</h1>
+        <h1 class="title"><?php bloginfo('name'); ?></h1>
       </section>
 
     </nav>

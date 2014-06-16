@@ -18,63 +18,140 @@ body {
 
 
 .row { 
-    max-width: 100%; 
+    //max-width: 100%; 
+    //margin: auto;
 }
 
-.showtile {
-    //min-height: 25.01em;
-    //max-height: 25.01em;
-    float: left;
-    margin: 0.5em;
-    background-color:#f6f6f6;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    
-    color: white;
-    position: relative;
-    
+
+
+
+
+
+
+.single > div > h1 > a {
+    color: black;
+}
+
+.single > div > h1 {
+    padding-top: 1.5em;    
+    font-size: 2em;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;        
+}
+
+h1 {
+    padding-top: 1.5em;
+    font-size: 1.5em;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;    
+}
+
+h2 {
+    padding-top: 1.2em;
+    font-size: 1.5em;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;    
+}
+
+h3 {
+    padding-top: 1.2em;
+    font-size: 1.5em;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;    
     
 }
 
-.showtile p {
-    padding-left: 1em;
-    padding-right: 1em;
+h4 {
+    font-size: 1.0em;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;    
+}
+
+p {
+    font-size: 1em;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;    
+}
+
+.tab-bar-section > h1 {
+    padding-top: 0px;
+    font-size: 2em;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;    
+}
+
+
+.postexcerpt {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-top: 1em;
+    background-color: #f8f8f8;
+    
+}
+
+.postexcerpt > h1 {
+    padding-top: 0.8em;
+    padding-bottom: 0.4em;
+    padding-left: 20px;
+    padding-right: 20px;    
+    font-size: 1.5em;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;    
+}
+
+.postexcerpt > h4 {
+    padding-left: 20px;
+    padding-right: 20px;    
+}
+.postexcerpt > p {
+    padding-left: 20px;
+    padding-right: 20px;
     overflow: hidden;
     text-overflow: ellipsis;
     text-decoration: none;
-    font-size: 1em;
-    font-family: 'Fira Sans', sans-serif;
+    margin-bottom: 0;
 }
 
-.showtitletext {
-
-    bottom: 0;
-    width: 100%;
-    background-color: #003366;
+.single {
+    margin-top: 2em;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #f8f8f8;
 }
 
-.showtile h2 {
-    padding: 0.5em;
-    margin-top: 0em;
-    color: black;
-    font-size: 1.3em;
-    font-family: 'Fira Sans', sans-serif;
-    
+.wp-caption img {
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 5px;
+    background: #555;
+    border: 0 none;
 }
 
-.showtile h1 {
-    color: black;
-    font-size: 1.8em;
-    font-family: 'Fira Sans', sans-serif;
-    
+.postcontent img {
+    max-width: 100%;
+    height: auto;
+    padding: 5px;
+    background: #555;
+    opacity: .8;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
-.showtile h4 {
-    color: black;
-    font-size: 1em;
-    font-family: 'Fira Sans', sans-serif;
-    
+img.alignleft {
+    float: left;
+    margin: 10px 20px 20px 0;
 }
+
+.wp-smiley {
+    width: auto !important;
+    padding: 0 !important;
+    background: none !important;
+}
+
 
 .tab-bar {
     background: black;
@@ -97,55 +174,70 @@ p, h1 {
 }
 
 
+
+.column, .columns {
+    padding: 0px;
+}
+
+#container {
+    margin: 0 auto;
+}
+
+
 @media only screen and (max-width: 40em) { 
-    .showtile {
-        width: 100%;
-        margin: 0px;
-    }
-    .showtitletext {
-        position: absolute;
-    }
+
     .small-12 {
         padding: 0px;
+    }
+    .postintro{
+        width: 100%;
+    }
+    .postcontent img {
+        width: 100%;
+        height: auto;
+        padding: 1px;
     }
 }
 
 @media only screen and (min-width: 40.063em) {
     .main-section {
-        padding-left: 8%;
+        //padding-left: 8%;
     }    
-    .showtile {
-        width: 28%;
+    .postintro{
+        width: 33.33%;
     }
 }
 
 @media only screen and (min-width: 64.063em) { 
     .main-section {
-        padding-left: 8%;
+        //padding-left: 8%;
     }    
-    .showtile {
-        width: 21%;
+
+    .postintro{
+        width: 25%;
+    }
+    .row {
+        max-width: 80em;
     }
 }
 
 @media only screen and (min-width: 90.063em) { 
     .main-section {
-        padding-left: 7.5%;
+        //padding-left: 3%;
     }    
-    .showtile {
-        width: 17%;
-    }
+
+    .postintro{
+        width: 25%;
+    }    
 
 }
 
 @media only screen and (min-width: 120.063em) { 
     .main-section {
-            padding-left: 7.5%;
-    }        
-    .showtile {
-        border: solid;
-        border-color: brown;
-        width: 9%;
-
+            //padding-left: 7.5%;
     }
+    .postintro{
+        width: 25%;
+    }    
+
 } 
