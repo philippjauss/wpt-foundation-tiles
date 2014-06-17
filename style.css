@@ -194,22 +194,40 @@ p, h1 {
     margin: 0 auto;
 }
 
-#sidebar h2 {
+.left-off-canvas-menu a {
+    color: white;
+    font-size: 1.4em;
+    font-weight: 400;
+    display: block;
+    transition: background 300ms ease;    
+}
+
+.left-off-canvas-menu a:hover {
+    background-color:black;
+}
+
+.left-off-canvas-menu h2 {
     color: white;
     font-size: 1.4em;
     font-weight: 400;
 }
 
-#sidebar li {
+
+
+.left-off-canvas-menu li {
     list-style-type: none;
     
 }
-#sidebar a {
+ul.off-canvas-list li a {
     border-bottom: none;
 }
 
 ul.off-canvas-list {
     padding-left: 2em;
+}
+
+ul.off-canvas-list li a:hover {
+    background-color:black;
 }
 
 

@@ -11,9 +11,6 @@
             if (!is_home()) { echo "";} else {
             bloginfo('name'); }?>
     </title>
-    <meta name="copyright" content="Copyright (c) 2014 -
-          <?php echo date("Y");?>, <?php bloginfo('name');?>
-          "/>
     <meta name="description" content="
           <?php bloginfo('description');?>
           "/>
