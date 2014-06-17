@@ -31,9 +31,17 @@
                         <p><?php _e('Sorry, keine Posts gefunden.'); ?></p>
                     </div>
                 <?php endif; ?>
+
                 </div>
             </div>
         </div>
+    <div class="row">
+        <div class="small-12 large-12 columns">
+            <div class="navigation">
+                <p><?php posts_nav_link('&#8734;','Neuere Beiträge','Ältere Beiträge'); ?></p>
+            </div>                    
+        </div>
+    </div>
 
 
 <?php get_footer(); ?>

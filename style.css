@@ -18,10 +18,12 @@ body {
 
 
 .row { 
-    //max-width: 100%; 
-    //margin: auto;
+
 }
 
+.main-section {
+    background-color: #E5E5E5;
+}
 
 
 
@@ -85,7 +87,7 @@ p {
     margin-left: 0.5em;
     margin-right: 0.5em;
     margin-top: 1em;
-    background-color: #f8f8f8;
+    background-color: white;
     
 }
 
@@ -116,7 +118,7 @@ p {
     margin-top: 2em;
     padding-left: 10px;
     padding-right: 10px;
-    background-color: #f8f8f8;
+    background-color: white;
 }
 
 .wp-caption img {
@@ -146,6 +148,11 @@ img.alignleft {
     margin: 10px 20px 20px 0;
 }
 
+img.alignright {
+    float: right;
+    margin: 10px 20px 20px 0;
+}
+
 .wp-smiley {
     width: auto !important;
     padding: 0 !important;
@@ -154,7 +161,11 @@ img.alignleft {
 
 
 .tab-bar {
-    background: black;
+    background: #53A93F;
+}
+
+.tab-bar-section > h1.title > a {
+    color: white;
 }
 
 .off-canvas-wrap {
@@ -166,7 +177,7 @@ img.alignleft {
 }
 
 .left-off-canvas-menu {
-    background: grey;
+    background: #036602;
 }
 
 p, h1 {
@@ -181,6 +192,24 @@ p, h1 {
 
 #container {
     margin: 0 auto;
+}
+
+#sidebar h2 {
+    color: white;
+    font-size: 1.4em;
+    font-weight: 400;
+}
+
+#sidebar li {
+    list-style-type: none;
+    
+}
+#sidebar a {
+    border-bottom: none;
+}
+
+ul.off-canvas-list {
+    padding-left: 2em;
 }
 
 

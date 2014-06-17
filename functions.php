@@ -35,6 +35,12 @@ function wft_article_dummyimage(){
     echo $dummyImage;
 }
 
+function wft_categorylist_with_count(){
+    $categories = wp_list_categories('title_li=&show_count=1&echo=0');
+    $categories = preg_replace('/<\/a> \(([0-9]+)\)/', ' (\\1)</a>', $categories);
+    echo $categories;
+}
+
 
 
 

@@ -37,7 +37,7 @@
       </section>
 
       <section class="middle tab-bar-section">
-        <h1 class="title"><?php bloginfo('name'); ?></h1>
+        <h1 class="title"><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
       </section>
 
     </nav>
