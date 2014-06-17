@@ -230,6 +230,12 @@ ul.off-canvas-list li a:hover {
     background-color:black;
 }
 
+ul.off-canvas-list li label {
+    background: #036602;
+    border-top: none;
+    padding: 0.66667rem;
+}
+
 
 @media only screen and (max-width: 40em) { 
 

@@ -1,10 +1,10 @@
 
-    <h2><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>">Home</a></h2>
+<li><label><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>">Home</a></label></li>
     
-    <h2 ><?php _e('Categories'); ?></h2>
+<li><label><?php _e('Categories'); ?></label></li>
     <?php wft_categorylist_with_count(); ?>
     
-    <h2 ><?php _e('Archives'); ?></h2>
+<li><label><?php _e('Archives'); ?></label></li>
     <?php wp_get_archives('type=monthly'); ?>
 
 
