@@ -228,12 +228,14 @@ ul.off-canvas-list li a {
 }
 
 ul.off-canvas-list li label a {
+    font-size: 1.5em;
+    color: white;    
     border-bottom: none;
     padding-left: 0px;
 }
 
 ul.off-canvas-list {
-    padding-left: 7px;
+    //padding-left: 7px;
 }
 
 ul.off-canvas-list li a:hover {
@@ -241,14 +243,49 @@ ul.off-canvas-list li a:hover {
 }
 
 ul.off-canvas-list li:hover {
-    background-color: yellow;
+    background-color: black;
+}
+
+ul.off-canvas-list li:first-child label:hover {
+    background-color: black;
 }
 
 ul.off-canvas-list li label {
+    font-size: 1.5em;
+    color: white;
     background: #036602;
     border-top: none;
     padding: 0.66667rem;
 }
+
+.bottomnavigation {
+    background: #53A93F;
+    margin-top: 20px;
+    min-height: 4em;
+    vertical-align: middle;
+}
+
+.bottomnavigation a {
+    display: block;
+    font-size: 2em;
+    color: white;
+    
+}
+.bottomleft a {
+    text-align: right;
+
+}
+
+.bottomright a {
+    text-align: left;
+}
+
+.bottomcenter a {
+    text-align: center;
+
+}
+
+
 
 
 @media only screen and (max-width: 40em) { 
