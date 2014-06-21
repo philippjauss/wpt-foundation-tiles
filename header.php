@@ -16,7 +16,8 @@
           "/>
     <!-- If you are using CSS version, only link these 2 files, you may add app.css to use for your overrides if you like. -->
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/normalize.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/foundation.css">    
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/foundation.css"> 
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/foundation-icons/foundation-icons.css" />
     
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
@@ -39,7 +40,7 @@
     </nav>
 
     <aside class="left-off-canvas-menu">
-      <ul class="off-canvas-list">
+      <ul class="off-canvas-list no-bullet">
           <?php get_sidebar(); ?>
 
       </ul>
