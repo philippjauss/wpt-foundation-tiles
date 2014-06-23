@@ -261,27 +261,31 @@ ul.off-canvas-list li label {
 .bottomnavigation {
     background: #53A93F;
     margin-top: 20px;
-    min-height: 4em;
+    min-height: 4.2em;
     vertical-align: middle;
 }
 
 .bottomnavigation a {
     display: block;
-    font-size: 2em;
+    font-size: 4em;
     color: white;
     
 }
 .bottomleft a {
-    text-align: right;
+    text-align: center;
 
 }
 
 .bottomright a {
-    text-align: left;
+    text-align: center;
 }
 
 .bottomcenter a {
     text-align: center;
+    border-left: solid;
+    border-right: solid;
+    border-color: white;
+    border-width: 1px;
 
 }
 

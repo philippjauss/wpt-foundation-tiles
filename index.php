@@ -38,9 +38,9 @@
     <div class="row">
         <div class="small-12 large-12 columns">
             <div class="navigation">
-                <div class="small-4 columns bottomnavigation bottomleft"><?php next_posts_link(' &laquo;  ','') ?></div>
-                <div class="small-4 columns bottomnavigation bottomcenter"><a href="#"><i class="foundicon-arrow-up"></i></a></div>
-                <div class="small-4 columns bottomnavigation bottomright"><?php previous_posts_link(' &raquo;') ?></div>
+                <div class="small-4 columns bottomnavigation bottomleft"><?php next_posts_link('',0) ?></div>
+                <div class="small-4 columns bottomnavigation bottomcenter"><a href="#pagetop" class="fi-arrow-up"></a></div>
+                <div class="small-4 columns bottomnavigation bottomright"><?php previous_posts_link('',0) ?></div>
                 
             </div>                    
         </div>

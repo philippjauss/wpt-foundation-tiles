@@ -35,11 +35,45 @@ function wft_article_dummyimage(){
     echo $dummyImage;
 }
 
+
+/*
+ * Original wp_list_categories enhanced with replacement of the brackets around the numbers
+ */
 function wft_categorylist_with_count(){
     $categories = wp_list_categories('title_li=&show_count=1&echo=0');
     $categories = preg_replace('/<\/a> \(([0-9]+)\)/', ' (\\1)</a>', $categories);
     echo $categories;
 }
+
+
+/*
+ *  Arrows to the nex-/previous links in the bottom navigation
+ */
+add_filter('next_posts_link_attributes', 'posts_link_attributes_n');
+add_filter('previous_posts_link_attributes', 'posts_link_attributes_p');
+ 
+function posts_link_attributes_n() {
+    return 'class="fi-arrow-left"';
+}
+
+function posts_link_attributes_p() {
+    return 'class="fi-arrow-right"';
+}
+
+/*
+ *  Arrows to the nex-/previous links in the bottom navigation
+ */
+add_filter('next_post_link_attributes', 'post_link_attributes_n');
+add_filter('previous_post_link_attributes', 'post_link_attributes_p');
+ 
+function post_link_attributes_n() {
+    return 'class="fi-arrow-left"';
+}
+
+function post_link_attributes_p() {
+    return 'class="fi-arrow-right"';
+}
+
 
 
 

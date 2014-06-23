@@ -26,7 +26,7 @@
     <?php wp_head(); ?>
 </head>
 <body>
-<div class="off-canvas-wrap" data-offcanvas>
+<div  class="off-canvas-wrap" data-offcanvas>
   <div class="inner-wrap">
     <nav class="tab-bar">
       <section class="left-small">
@@ -34,7 +34,7 @@
       </section>
 
       <section class="middle tab-bar-section">
-        <h1 class="title"><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
+        <h1 id="pagetop" class="title"><a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
       </section>
 
     </nav>
