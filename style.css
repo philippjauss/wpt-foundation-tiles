@@ -14,9 +14,53 @@ License URI: http://opensource.org/licenses/MIT
 body {
     background-color: white;
     padding-left: 0px;
+    font-family: 'Source Sans Pro', sans-serif ;
+    font-weight: 400;   
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+p, h1 {
+    color: black;
+}
+
+h1 {
+    padding-top: 1.5em;
+    font-size: 1.5em;
+    font-weight: 400;    
+}
+
+h2 {
+    padding-top: 1.2em;
+    font-size: 1.5em;
+    font-weight: 400;    
+}
+
+h3 {
+    padding-top: 1.2em;
+    font-size: 1.5em;
+    font-weight: 400;    
     
 }
 
+h4 {
+    font-size: 1.0em;
+    font-weight: 400;    
+}
+
+p {
+    font-size: 1em;
+    font-weight: 300;    
+}
 
 .row { 
 
@@ -26,62 +70,33 @@ body {
     background-color: #E5E5E5;
 }
 
-
-
-
-
+.single > div > h1 {
+    padding-top: 1.5em;    
+    font-size: 2em;
+    font-weight: 400;        
+}
 
 .single > div > h1 > a {
     color: black;
 }
 
-.single > div > h1 {
-    padding-top: 1.5em;    
-    font-size: 2em;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 400;        
-}
 
-h1 {
-    padding-top: 1.5em;
-    font-size: 1.5em;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 400;    
-}
-
-h2 {
-    padding-top: 1.2em;
-    font-size: 1.5em;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 400;    
-}
-
-h3 {
-    padding-top: 1.2em;
-    font-size: 1.5em;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 400;    
-    
-}
-
-h4 {
-    font-size: 1.0em;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 400;    
-}
-
-p {
-    font-size: 1em;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 300;    
+.tab-bar {
+    background: #53A93F;
 }
 
 .tab-bar-section > h1 {
     padding-top: 0px;
-    font-size: 2em;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.7em;
     font-weight: 400;    
 }
+
+.tab-bar-section > h1.title > a {
+    color: white;
+    display: block;
+}
+
+
 
 
 .postexcerpt {
@@ -98,7 +113,6 @@ p {
     padding-left: 20px;
     padding-right: 20px;    
     font-size: 1.5em;
-    font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;    
 }
 
@@ -166,13 +180,7 @@ img.alignright {
 }
 
 
-.tab-bar {
-    background: #53A93F;
-}
 
-.tab-bar-section > h1.title > a {
-    color: white;
-}
 
 .off-canvas-wrap {
     height: 100%;
@@ -186,9 +194,7 @@ img.alignright {
     background: #53A93F;
 }
 
-p, h1 {
-    color: black;
-}
+
 
 
 
@@ -229,7 +235,6 @@ ul.off-canvas-list li a {
 }
 
 ul.off-canvas-list li label a {
-    font-size: 1.5em;
     color: white;    
     border-bottom: none;
     padding-left: 0px;
