@@ -1,11 +1,12 @@
 /*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 03.06.2014, 11:36:47
-    Author     : Philipp
+Theme Name: Theme based on zurb foundation showing tiles with masonry
+Theme URI: https://github.com/philippjauss/wpt-foundation-tiles
+Version: 0.1.0
+Description: A simple theme, showing posts as tiles on the main page, based on zurb foundation and masonry
+Author: Philipp Jauss
+Author URI: http://www.cyberdines.ch
+License: MIT
+License URI: http://opensource.org/licenses/MIT
 */
 
 
@@ -182,7 +183,7 @@ img.alignright {
 }
 
 .left-off-canvas-menu {
-    background: #036602;
+    background: #53A93F;
 }
 
 p, h1 {
@@ -253,21 +254,31 @@ ul.off-canvas-list li:first-child label:hover {
 ul.off-canvas-list li label {
     font-size: 1.5em;
     color: white;
-    background: #036602;
+    background: #53A93F;
     border-top: none;
     padding: 0.66667rem;
 }
 
+.bottomnavigationcontainer {
+    max-width: 100% !important;
+    margin-top: 20px;
+    background: #53A93F;
+    height: 2.8125rem;
+}
+
 .bottomnavigation {
     background: #53A93F;
-    margin-top: 20px;
-    min-height: 4.2em;
+    //margin-top: 20px;
+    //min-height: 4.2em;
     vertical-align: middle;
 }
 
 .bottomnavigation a {
+    //padding-top: 10px;
+    //padding-bottom: 10px;
     display: block;
-    font-size: 4em;
+    font-size: 2em;
+    line-height: 2.8125rem;
     color: white;
     
 }

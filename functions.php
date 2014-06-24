@@ -63,9 +63,6 @@ function posts_link_attributes_p() {
 /*
  *  Arrows to the nex-/previous links in the bottom navigation
  */
-add_filter('next_post_link_attributes', 'post_link_attributes_n');
-add_filter('previous_post_link_attributes', 'post_link_attributes_p');
- 
 function post_link_attributes_n() {
     return 'class="fi-arrow-left"';
 }
@@ -73,6 +70,85 @@ function post_link_attributes_n() {
 function post_link_attributes_p() {
     return 'class="fi-arrow-right"';
 }
+
+add_filter('next_post_link_attributes', 'post_link_attributes_n');
+add_filter('previous_post_link_attributes', 'post_link_attributes_p');
+
+
+
+
+/*
+ * Theme customizer (head color)
+ */
+function wft_register_theme_customizer ( $wp_customize){
+    $wp_customize->add_setting(
+        'wft_header_color',
+        array(
+            'default'     => '#53A93F'
+        )
+    );
+    $wp_customize->add_setting(
+        'wft_sidebar_color',
+        array(
+            'default'     => '#036602'
+        )
+    );
+    $wp_customize->add_setting(
+        'wft_bottomnav_color',
+        array(
+            'default'     => '#53A93F'
+        )
+    );    
+    
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'header_color',
+            array(
+                'label'      => __( 'Header Color', 'wft' ),
+                'section'    => 'colors',
+                'settings'   => 'wft_header_color'
+            )
+        )
+    );
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'sidebar_color',
+            array(
+                'label'      => __( 'Sidebar Color', 'wft' ),
+                'section'    => 'colors',
+                'settings'   => 'wft_sidebar_color'
+            )
+        )
+    );
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'bottomnav_color',
+            array(
+                'label'      => __( 'Bottom navigation Color', 'wft' ),
+                'section'    => 'colors',
+                'settings'   => 'wft_bottomnav_color'
+            )
+        )
+    );    
+}
+add_action ('customize_register','wft_register_theme_customizer');
+
+function wft_customizer_css() {
+    ?>
+    <style type="text/css">
+        .tab-bar { background: <?php echo get_theme_mod( 'wft_header_color' ); ?>; }
+        .left-off-canvas-menu {background: <?php echo get_theme_mod( 'wft_sidebar_color' ); ?>; }
+        ul.off-canvas-list li label {background: <?php echo get_theme_mod( 'wft_sidebar_color' ); ?>; }
+        .bottomnavigation { background: <?php echo get_theme_mod( 'wft_bottomnav_color' ); ?>; }
+        .bottomnavigationcontainer { background: <?php echo get_theme_mod( 'wft_bottomnav_color' ); ?>; }
+    </style>
+    <?php
+}
+add_action( 'wp_head', 'wft_customizer_css' );
+
 
 
 

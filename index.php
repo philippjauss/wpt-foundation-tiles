@@ -35,7 +35,7 @@
                 </div>
             </div>
         </div>
-    <div class="row">
+    <div class="row bottomnavigationcontainer">
         <div class="small-12 large-12 columns">
             <div class="navigation">
                 <div class="small-4 columns bottomnavigation bottomleft"><?php next_posts_link('',0) ?></div>
