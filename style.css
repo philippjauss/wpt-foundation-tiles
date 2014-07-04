@@ -70,6 +70,13 @@ p {
     background-color: #E5E5E5;
 }
 
+.single {
+    margin-top: 2em;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: white;
+}
+
 .single > div > h1 {
     padding-top: 1.5em;    
     font-size: 2em;
@@ -78,6 +85,12 @@ p {
 
 .single > div > h1 > a {
     color: black;
+}
+
+.singletimestamp {
+    padding-top: 0;
+    font-size: 1em;
+    font-weight: 300;
 }
 
 
@@ -130,12 +143,7 @@ p {
     margin-bottom: 0;
 }
 
-.single {
-    margin-top: 2em;
-    padding-left: 10px;
-    padding-right: 10px;
-    background-color: white;
-}
+
 
 .wp-caption img {
     width: auto;
@@ -149,7 +157,7 @@ p {
 .postcontent img {
     max-width: 100%;
     height: auto;
-    padding: 5px;
+    padding: 3px;
     background: #555;
     opacity: .8;
     -webkit-transition: all 0.3s ease-in-out;
@@ -165,12 +173,12 @@ img {
 
 img.alignleft {
     float: left;
-    margin: 10px 20px 20px 0;
+    margin: 5px 20px 5px 0px;
 }
 
 img.alignright {
     float: right;
-    margin: 10px 20px 20px 0;
+    margin: 5px 0px 5px 20px;
 }
 
 .wp-smiley {
@@ -313,6 +321,33 @@ ul.off-canvas-list li label {
 
 }
 
+.authorinfo {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+    background-color: beige;
+}
+.authorinfo h6 {
+    font-size: 1.5em;
+ 
+}
+
+.authorinfo h7 {
+    font-size: 1.2em;
+    line-height: 2em;
+}
+.gravatarpic {
+    margin-top: 0.6em;
+    float: left;
+    margin-right: 15px;
+}
+
+.tags {
+    margin-top: 5px;
+}
 
 
 

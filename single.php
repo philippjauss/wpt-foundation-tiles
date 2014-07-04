@@ -26,23 +26,30 @@
                                 <?php the_title();?>
                             </a>
                         </h1>
+                        <h2 class="singletimestamp">
+                                <?php echo "(" . get_the_time('j. F Y') . " - " . get_the_time() . ")";?>
+                        </h2>
                         <div class="postcontent">
                             <?php the_content();?>
                             
+                        </div>
+                        <div class="authorinfo">
+                            <h6>Über den Author</h6>
+                            <div class="gravatarpic">
+                              <?php   echo get_avatar( get_the_author_meta('user_email'), 96); 
+                              ?>
+                            </div>
+                            <div class="authordetails">
+                                <h7> <?php the_author_posts_link();?></h7>
+                                <p><?php echo get_the_author_meta('description'); ?></p>
+                            </div>
+
                         </div>
                         <div class="tags">
                             abgelegt unter: 
                                 <?php the_category(', ');?><br>
                                 <?php if(has_tag()) the_tags('Tags:&nbsp;',', ','<br>'); ?>
-                            geschrieben von 
-                                <?php the_author_posts_link();?> <br>
-                            am 
-                                <?php the_time('j. F Y'); ?>
-                            um
-                                <?php the_time();?>
-                            
-                                
-                            
+            
                         </div>
                         <div class="postfooter">
                             
