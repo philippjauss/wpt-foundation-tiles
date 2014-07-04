@@ -78,7 +78,7 @@ add_filter('previous_post_link_attributes', 'post_link_attributes_p');
 
 
 /*
- * Theme customizer (head color)
+ * Theme customizer
  */
 function wft_register_theme_customizer ( $wp_customize){
     $wp_customize->add_setting(
@@ -132,7 +132,41 @@ function wft_register_theme_customizer ( $wp_customize){
                 'settings'   => 'wft_bottomnav_color'
             )
         )
-    );    
+    );
+    
+    $wp_customize->add_section( 'wft_share', array(
+            'title' => __('Teilen via Social Networks','wft'),
+            'description' => __('Verfügbare Social Networks','wft'),
+            'priority' => '4'
+    ) );
+
+    // add the settings and the controls
+
+            $wp_customize->add_setting( 'wft_theme_options[share_google]', array(
+                    'default' => 0,
+                    'type' => 'option',
+            ) );
+
+            $wp_customize->add_control( 'wft_theme_options[share_google]', array(
+                    'label' => __('Google+1-button','wft'),
+                    'type' => 'checkbox',
+                    'priority' => '2',
+                    'section' => 'wft_share',
+            ) );
+            
+            
+            $wp_customize->add_setting( 'wft_theme_options[share_facebook]', array(
+                    'default' => 0,
+                    'type' => 'option',
+            ) );
+
+            $wp_customize->add_control( 'wft_theme_options[share_facebook]', array(
+                    'label' => __('Facebook like-button','wft'),
+                    'type' => 'checkbox',
+                    'priority' => '3',
+                    'section' => 'wft_share',
+            ) );            
+    
 }
 add_action ('customize_register','wft_register_theme_customizer');
 
