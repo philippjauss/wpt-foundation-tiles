@@ -183,8 +183,8 @@ img.alignright {
 
 
 .off-canvas-wrap {
-    height: 100%;
-    overflow-y: auto;
+    //height: 100%;
+    //overflow-y: auto;
 } 
 .inner-wrap {
     min-height: 100%; 
@@ -192,6 +192,11 @@ img.alignright {
 
 .left-off-canvas-menu {
     background: #53A93F;
+}
+
+.left-off-canvas-menu hr {
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 
@@ -276,6 +281,7 @@ ul.off-canvas-list li label {
     //margin-top: 20px;
     //min-height: 4.2em;
     vertical-align: middle;
+    min-height: 1px;
 }
 
 .bottomnavigation a {
@@ -286,15 +292,17 @@ ul.off-canvas-list li label {
     line-height: 2.8125rem;
     color: white;
     
+    
 }
+.bottomleft {
+    float: left;
+}
+
 .bottomleft a {
     text-align: center;
 
 }
 
-.bottomright a {
-    text-align: center;
-}
 
 .bottomcenter a {
     text-align: center;

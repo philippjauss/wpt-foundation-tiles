@@ -46,6 +46,12 @@
           inactive: triggerMasonry
         });
 
+        // Expand side menu to page-height, even if the content is less
+        $('a.left-off-canvas-toggle').click(function() {
+            $('.inner-wrap').css('min-height', $(window).height() + 'px');
+        });
+
+
 
     </script>
 
