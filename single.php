@@ -9,6 +9,9 @@
  */
 
     get_header();
+
+$options = get_option('wft_theme_options'); 
+    
 ?>
 
 
@@ -51,6 +54,31 @@
                                 <?php if(has_tag()) the_tags('Tags:&nbsp;',', ','<br>'); ?>
             
                         </div>
+                        
+                        <!-- share post -->                        
+                         <?php if ($options['share_google'] == 1 or 
+                                   $options['share_facebook'] == 1) { ?>
+                        
+                        <div class="sharearea">
+                            <h6>Teilen</h6>
+                            <ul>
+                             <?php if ($options['share_facebook'] == 1) { ?>
+                                <li class="facebook">
+                                    <div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="true">
+                                    </div>
+                                </li>
+                             <?php } ?>   
+                             <?php if ($options['share_google'] == 1) { ?>
+                                <li class="google">
+                                    <div class="g-plusone" data-size="medium">
+                                    </div>
+                                </li>
+                             <?php } ?>
+                            </ul>
+                        </div>
+                        
+                        <?php } ?>
+                        
                         <div class="postfooter">
                             
                         </div>
