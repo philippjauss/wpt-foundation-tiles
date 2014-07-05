@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/foundation-icons/foundation-icons.css" />
     
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
     <script src="<?php echo get_template_directory_uri(); ?>/js/vendor/modernizr.js"></script>    
     
     <?php wp_head(); ?>
