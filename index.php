@@ -19,7 +19,7 @@
                                 }
                             ?>
                             <h1><?php the_title(); ?></h1>
-                            <h4><?php the_time('F jS, Y'); ?></h4>
+                            <h4>(<?php the_time('F jS, Y'); ?>)</h4>
                             <?php $excerpt = get_the_excerpt(); ?>
                             <p><?php echo string_limit_words($excerpt,25) . " ...";?></p>
                             </div>
