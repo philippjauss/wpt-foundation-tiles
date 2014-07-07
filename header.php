@@ -25,7 +25,7 @@
     
     <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?> >
 <div  class="off-canvas-wrap" data-offcanvas>
   <div class="inner-wrap">
     <nav class="tab-bar">

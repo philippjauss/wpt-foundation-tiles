@@ -24,19 +24,21 @@ $options = get_option('wft_theme_options');
                     
                     
                     <div <?php post_class();?> id="post-<?php the_ID();?>">
-                        <h1>
-                            <a href="<?php the_permalink(); ?>" rel="bookmark">
-                                <?php the_title();?>
-                            </a>
-                        </h1>
-                        <h2 class="singletimestamp">
-                                <?php echo "(" . get_the_time('j. F Y') . " - " . get_the_time() . ")";?>
-                        </h2>
-                        <div class="postcontent">
+                        <div class="postcontentheader singlepadding">
+                            <h1>
+                                <a href="<?php the_permalink(); ?>" rel="bookmark">
+                                    <?php the_title();?>
+                                </a>
+                            </h1>
+                            <h2 class="singletimestamp">
+                                    <?php echo "(" . get_the_time('j. F Y') . " - " . get_the_time() . ")";?>
+                            </h2>
+                        </div>    
+                        <div class="postcontent singlepadding">
                             <?php the_content();?>
                             
                         </div>
-                        <div class="authorinfo">
+                        <div class="authorinfo singlepadding">
                             <h6>Über den Author</h6>
                             <div class="gravatarpic">
                               <?php   echo get_avatar( get_the_author_meta('user_email'), 96); 
@@ -48,7 +50,7 @@ $options = get_option('wft_theme_options');
                             </div>
 
                         </div>
-                        <div class="tags">
+                        <div class="tags singlepadding">
                             abgelegt unter: 
                                 <?php the_category(', ');?><br>
                                 <?php if(has_tag()) the_tags('Tags:&nbsp;',', ','<br>'); ?>
@@ -59,7 +61,7 @@ $options = get_option('wft_theme_options');
                          <?php if ($options['share_google'] == 1 or 
                                    $options['share_facebook'] == 1) { ?>
                         
-                        <div class="sharearea">
+                        <div class="sharearea singlepadding">
                             <h6>Teilen</h6>
                             <ul>
                              <?php if ($options['share_facebook'] == 1) { ?>
@@ -83,7 +85,7 @@ $options = get_option('wft_theme_options');
                             
                         </div>
                     </div>
-                    <div class="navigation">
+                    <div class="singlenavigation singlepadding">
                         <h3>Navigation in den Beiträgen
                         </h3>
                         <div class="alignleft">

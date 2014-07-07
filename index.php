@@ -9,17 +9,18 @@
                     <a href="<?php the_permalink(); ?>" rel="bookmark">
                         <div class="postintro">
                             <div class="postexcerpt">
-                             
-                            <?php 
-                                if ( has_post_thumbnail() ) {
-                                    the_post_thumbnail(); 
-                                }
-                                else {
-                                    wft_article_dummyimage();
-                                }
-                            ?>
-                            <h1><?php the_title(); ?></h1>
-                            <h4>(<?php the_time('F jS, Y'); ?>)</h4>
+                                <?php 
+                                    if ( has_post_thumbnail() ) {
+                                        the_post_thumbnail(); 
+                                    }
+                                    else {
+                                        wft_article_dummyimage();
+                                    }
+                                ?>
+                                <div class="postexcerptheader">
+                                    <h1><?php the_title(); ?></h1>
+                                    <h4>(<?php the_time('F jS, Y'); ?>)</h4>
+                                </div>
                             <?php $excerpt = get_the_excerpt(); ?>
                             <p><?php echo string_limit_words($excerpt,25) . " ...";?></p>
                             </div>
