@@ -76,6 +76,66 @@ add_filter('previous_post_link_attributes', 'post_link_attributes_p');
 
 
 
+if ( ! function_exists( 'wft_comment' ) ) :
+/**
+ * Template for comments.
+ *
+ * Used by wp_list_comments callback to display comments. 
+ * Copied from twenty-twelve comments template and modified.
+ *
+ */
+function wft_comment( $comment, $args, $depth ) {
+	$GLOBALS['comment'] = $comment;
+	switch ( $comment->comment_type ) :
+		case 'pingback' :
+		case 'trackback' :
+		// Display trackbacks differently than normal comments.
+	?>
+	<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
+		<p><?php echo 'pingback '; ?> <?php comment_author_link(); ?> <?php edit_comment_link('Edit', '<span class="edit-link">', '</span>' ); ?></p>
+	<?php
+			break;
+		default :
+		// Proceed with normal comments.
+		global $post;
+	?>
+	<li <?php comment_class(); ?>  id="li-comment-<?php comment_ID(); ?>">
+		<article id="comment-<?php comment_ID(); ?>" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<?php
+					echo get_avatar( $comment, 44 );
+					printf( '<cite><b class="fn">%1$s</b> %2$s</cite>',
+						get_comment_author_link(),
+						// If current post author is also comment author, make it known visually.
+						( $comment->user_id === $post->post_author ) ? '<span>' . 'Post author' . '</span>' : ''
+					);
+					printf( '<a href="%1$s"><time datetime="%2$s">%3$s</time></a>',
+						esc_url( get_comment_link( $comment->comment_ID ) ),
+						get_comment_time( 'c' ),
+						/* translators: 1: date, 2: time */
+						sprintf( '%1$s um %2$s' , get_comment_date(), get_comment_time() )
+					);
+				?>
+			</header><!-- .comment-meta -->
+
+			<?php if ( '0' == $comment->comment_approved ) : ?>
+				<p class="comment-awaiting-moderation"><?php echo 'Dein Kommentar wartet auf Genehmigung.'; ?></p>
+			<?php endif; ?>
+
+			<section class="comment-content comment">
+				<?php comment_text(); ?>
+				<?php edit_comment_link( 'Bearbeiten', '<p class="edit-link">', '</p>' ); ?>
+			</section><!-- .comment-content -->
+
+
+		</article><!-- #comment-## -->
+	<?php
+		break;
+	endswitch; // end comment_type check
+}
+endif;
+
+
 
 /*
  * Theme customizer
