@@ -384,6 +384,21 @@ ul.off-canvas-list li label {
 
 
 
+
+.comments {
+    margin-top: 20px;
+    background-color: lightgrey;
+}
+
+.commentlist {
+    margin-left: 0px;
+}
+
+.comment {
+    list-style-type: none;
+}
+
+
 @media only screen and (max-width: 40em) { 
 
     .small-12 {

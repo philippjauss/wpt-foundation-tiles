@@ -9,7 +9,7 @@
 ?>
 
 <!-- Anfang Kommentare -->
-<div class="comments">
+<div class="comments singlepadding">
     <?php if (post_password_required()): //sind Kommentare geschützt ?>
         <p>Bitte Passwort eingeben um die Kommentare anzuzeigen </p>
     <?php
@@ -18,16 +18,15 @@
     ?>
     <?php if (comments_open()): //Kommentare sind erlaubt ?>
         
-        <h3 id="postcomment">Hinterlasse einen Kommentar</h3>
+        
         
             <?php if (have_comments()): // Falls bereits Kommentare vorhanden ?>
                 
                 <ul class="commentlist">
-                    <?php wp_list_comments(array(
-                            'style'=>'ul',
-                            'avatar-size'=>'64'
-                            )
-                        ); ?>
+                    <?php wp_list_comments( array( 
+                        'callback' => 'wft_comment',
+                        'style' => 'ul' ) ); ?>
+
 
                     <?php if( count($comments) >= get_option('comments_per_page') )://Nur wenn > 50 Kommentare ?>
                         <div class="navigation">
@@ -39,6 +38,7 @@
             <?php else: // have_comments() ?>
                 <p>Noch kein Kommentar. Sei der Erste, der etwas schreibt.</p>
             <?php endif; // have_comments() ?>
+            
             <p>
                 <?php post_comments_feed_link('<abbr title="Really Simple ' .
                                                'Syndicytion">RSS</abbr>-Feed'); ?>
@@ -52,7 +52,9 @@
 
                 <?php endif; // pings_open ?>
             </p>
-        
+            
+            
+            <h3 id="postcomment">Hinterlasse einen Kommentar</h3>
             <?php if ( get_option('comment_registration') &&
                     !is_user_logged_in() ): //Registrierung verlangt und nicht angemeldet ?>
                 <p>
@@ -122,6 +124,8 @@
                 </form>
             
             <?php endif; // Registrierung verlang und angemeldet ?>
+                 
+        
         
         <?php else: // comments_open () ?>
             <h3 id="postcomment">Kommentare</h3>
