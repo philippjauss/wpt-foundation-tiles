@@ -379,15 +379,22 @@ ul.off-canvas-list li label {
 }
 
 .tags {
-    margin-top: 5px;
+    padding-top: 40px;
+    background-color: #fbfbfb;
+    padding-bottom: 40px;
+}
+
+.tags h6 {
+    font-weight: bolder;
 }
 
 
 
 
 .comments {
-    margin-top: 20px;
-    background-color: lightgrey;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #fbfbfb;
 }
 
 .commentlist {
@@ -398,6 +405,18 @@ ul.off-canvas-list li label {
     list-style-type: none;
 }
 
+.commentbox {
+    
+}
+
+.sharearea {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.socialmediabutton {
+    
+}
 
 @media only screen and (max-width: 40em) { 
 
