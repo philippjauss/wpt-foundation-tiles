@@ -51,9 +51,9 @@ $options = get_option('wft_theme_options');
 
                         </div>
                         <div class="tags singlepadding">
-                            abgelegt unter: 
-                                <?php the_category(', ');?><br>
-                                <?php if(has_tag()) the_tags('Tags:&nbsp;',', ','<br>'); ?>
+                            <h6>Abgelegt unter: </h6>
+                                <?php the_category(', ');?><br><br>
+                                <?php if(has_tag()) the_tags('<h6>Tags:</h6>',', ','<br>'); ?>
             
                         </div>
                         
@@ -62,21 +62,38 @@ $options = get_option('wft_theme_options');
                                    $options['share_facebook'] == 1) { ?>
                         
                         <div class="sharearea singlepadding">
-                            <h6>Teilen</h6>
-                            <ul>
+                            <div class="row">
+                                
                              <?php if ($options['share_facebook'] == 1) { ?>
-                                <li class="facebook">
-                                    <div class="fb-like" data-send="false" data-layout="button_count" data-width="100" data-show-faces="true">
-                                    </div>
-                                </li>
-                             <?php } ?>   
-                             <?php if ($options['share_google'] == 1) { ?>
-                                <li class="google">
-                                    <div class="g-plusone" data-size="medium">
-                                    </div>
-                                </li>
+                            <div class="small-4 large-4 columns">
+                            
+                                <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;width&amp;layout=box_count&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=65" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:65px;" allowTransparency="true"></iframe>
+                            
                              <?php } ?>
-                            </ul>
+                            </div>
+                             <?php if ($options['share_google'] == 1) { ?>
+                                <div class="small-4 large-4 columns">
+                                <a href="https://twitter.com/share" class="twitter-share-button" data-lang="de" data-size="large">Twittern</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                                </div>
+                                <div class="small-4 large-4 columns">
+                                        <!-- Fügen Sie dieses Tag an der Stelle ein, an der die Teilen-Schaltfläche erscheinen soll. -->
+                                        <div class="g-plus" data-action="share" data-annotation="vertical-bubble" data-height="60"></div>
+
+                                        <!-- Fügen Sie dieses Tag nach dem letzten Teilen-Tag ein. -->
+                                        <script type="text/javascript">
+                                          window.___gcfg = {lang: 'de'};
+
+                                          (function() {
+                                            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                                            po.src = 'https://apis.google.com/js/platform.js';
+                                            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                                          })();
+                                        </script>
+                                    </div>                                    
+                                
+                             <?php } ?>
+                            </div>
                         </div>
                         
                         <?php } ?>

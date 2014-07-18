@@ -39,21 +39,9 @@
                 <p>Noch kein Kommentar. Sei der Erste, der etwas schreibt.</p>
             <?php endif; // have_comments() ?>
             
-            <p>
-                <?php post_comments_feed_link('<abbr title="Really Simple ' .
-                                               'Syndicytion">RSS</abbr>-Feed'); ?>
-                für Kommentare dieses Beitrags.
-
-                <?php if (pings_open()): ?>
-
-                    <a href="<?php trackback_url()?>" rel="trackback">
-                        TrackBack-<abbr title="Universal Resource Locator">URL</abbr>
-                    </a> des Artikels.
-
-                <?php endif; // pings_open ?>
-            </p>
+</div>
             
-            
+            <div id ="commentbox" class="singlepadding">
             <h3 id="postcomment">Hinterlasse einen Kommentar</h3>
             <?php if ( get_option('comment_registration') &&
                     !is_user_logged_in() ): //Registrierung verlangt und nicht angemeldet ?>
@@ -115,7 +103,7 @@
                         </textarea>
                     </p>
                     <p>
-                        <input name="submit" type="submit"
+                        <input class="button expand" name="submit" type="submit"
                                id="submit" tabindex="5" value="Kommentar Senden" />
                         <input type="hidden" name="comment_post_ID"
                                value="<?php echo $id; ?>" />
@@ -124,7 +112,7 @@
                 </form>
             
             <?php endif; // Registrierung verlang und angemeldet ?>
-                 
+           </div>      
         
         
         <?php else: // comments_open () ?>
@@ -134,4 +122,3 @@
             </p>
         <?php endif; // comments_open() ?>
         <div class="commentsFoter">&nbsp;</div>
-</div>
