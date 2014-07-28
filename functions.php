@@ -135,7 +135,14 @@ function wft_comment( $comment, $args, $depth ) {
 }
 endif;
 
+/* 
+ * Theme menu editor
+ */
 
+function wft_register_additional_side_menu_entries (){
+    register_nav_menu('side-menu',__('Side entries'));
+}
+add_action('init','wft_register_additional_side_menu_entries');
 
 /*
  * Theme customizer
@@ -242,6 +249,8 @@ function wft_customizer_css() {
     <?php
 }
 add_action( 'wp_head', 'wft_customizer_css' );
+
+
 
 
 

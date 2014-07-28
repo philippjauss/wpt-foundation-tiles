@@ -275,6 +275,10 @@ img.alignright {
     list-style-type: none;
     
 }*/
+.no-bullet > ul,.menu {
+    list-style-type: none;
+}
+
 ul.off-canvas-list li a {
     border-bottom: none;
 }
@@ -347,6 +351,10 @@ ul.off-canvas-list li label {
     border-color: white;
     border-width: 1px;
 
+}
+
+.bottomright a {
+    text-align: center;
 }
 
 .singlenavigation{
