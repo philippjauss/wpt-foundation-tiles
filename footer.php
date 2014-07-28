@@ -39,7 +39,7 @@
         // trigger masonry when fonts have loaded
         WebFont.load({
             google: {
-                families: ['Source Sans Pro']
+                families: ['Arimo']
             },
             
           active: triggerMasonry,
