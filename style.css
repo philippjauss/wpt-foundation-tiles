@@ -357,6 +357,7 @@ ul.off-canvas-list li label {
 
 .authorinfo {
     background-color: beige;
+    min-height: 14em;
 }
 .authorinfo h6 {
     font-size: 1.5em;

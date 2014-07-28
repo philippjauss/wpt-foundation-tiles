@@ -73,7 +73,7 @@ $options = get_option('wft_theme_options');
                             </div>
                              <?php if ($options['share_google'] == 1) { ?>
                                 <div class="small-4 large-4 columns">
-                                <a href="https://twitter.com/share" class="twitter-share-button" data-lang="de" data-size="large">Twittern</a>
+                                <a href="https://twitter.com/share" class="twitter-share-button" data-lang="de" data-count="vertical">Twittern</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
                                 </div>
                                 <div class="small-4 large-4 columns">
