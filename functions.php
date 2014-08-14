@@ -151,19 +151,47 @@ function wft_register_theme_customizer ( $wp_customize){
     $wp_customize->add_setting(
         'wft_header_color',
         array(
-            'default'     => '#53A93F'
+            'default'     => '#259b24'
         )
     );
     $wp_customize->add_setting(
         'wft_sidebar_color',
         array(
-            'default'     => '#036602'
+            'default'     => '#0a7e07'
         )
     );
     $wp_customize->add_setting(
         'wft_bottomnav_color',
         array(
-            'default'     => '#53A93F'
+            'default'     => '#259b24'
+        )
+    );    
+    
+    $wp_customize->add_setting(
+        'wft_postcontentheader_color',
+        array(
+            'default'     => '#d0f8ce'
+        )
+    );
+    
+    $wp_customize->add_setting(
+        'wft_authorinfo_color',
+        array(
+            'default'     => '#a3e9a4'
+        )
+    );
+    
+    $wp_customize->add_setting(
+        'wft_tags_color',
+        array(
+            'default'     => '#72d572'
+        )
+    );
+    
+    $wp_customize->add_setting(
+        'wft_comments_color',
+        array(
+            'default'     => '#d0f8ce'
         )
     );    
     
@@ -201,6 +229,55 @@ function wft_register_theme_customizer ( $wp_customize){
         )
     );
     
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'postcontentheader_color',
+            array(
+                'label'      => __( 'Postcontent header color', 'wft' ),
+                'section'    => 'colors',
+                'settings'   => 'wft_postcontentheader_color'
+            )
+        )
+    );    
+    
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'authorinfo_color',
+            array(
+                'label'      => __( 'Author info color', 'wft' ),
+                'section'    => 'colors',
+                'settings'   => 'wft_authorinfo_color'
+            )
+        )
+    );    
+
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'tags_color',
+            array(
+                'label'      => __( 'Tags color', 'wft' ),
+                'section'    => 'colors',
+                'settings'   => 'wft_tags_color'
+            )
+        )
+    );    
+  
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'comments_color',
+            array(
+                'label'      => __( 'Comments color', 'wft' ),
+                'section'    => 'colors',
+                'settings'   => 'wft_comments_color'
+            )
+        )
+    );    
+        
+    
     $wp_customize->add_section( 'wft_share', array(
             'title' => __('Teilen via Social Networks','wft'),
             'description' => __('Verfügbare Social Networks','wft'),
@@ -221,6 +298,8 @@ function wft_register_theme_customizer ( $wp_customize){
                     'section' => 'wft_share',
             ) );
             
+           
+            
             
             $wp_customize->add_setting( 'wft_theme_options[share_facebook]', array(
                     'default' => 0,
@@ -232,7 +311,19 @@ function wft_register_theme_customizer ( $wp_customize){
                     'type' => 'checkbox',
                     'priority' => '3',
                     'section' => 'wft_share',
-            ) );            
+            ) );
+            
+            $wp_customize->add_setting( 'wft_theme_options[share_twitter]', array(
+                    'default' => 0,
+                    'type' => 'option',
+            ) );
+
+            $wp_customize->add_control( 'wft_theme_options[share_twitter]', array(
+                    'label' => __('Twitter tweet-button','wft'),
+                    'type' => 'checkbox',
+                    'priority' => '4',
+                    'section' => 'wft_share',
+            ) );             
     
 }
 add_action ('customize_register','wft_register_theme_customizer');
@@ -245,6 +336,10 @@ function wft_customizer_css() {
         ul.off-canvas-list li label {background: <?php echo get_theme_mod( 'wft_sidebar_color' ); ?>; }
         .bottomnavigation { background: <?php echo get_theme_mod( 'wft_bottomnav_color' ); ?>; }
         .bottomnavigationcontainer { background: <?php echo get_theme_mod( 'wft_bottomnav_color' ); ?>; }
+        .postcontentheader { background-color: <?php echo get_theme_mod( 'wft_postcontentheader_color' ); ?>; }
+        .authorinfo { background-color: <?php echo get_theme_mod( 'wft_authorinfo_color' ); ?>; }
+        .tags { background-color: <?php echo get_theme_mod( 'wft_tags_color' ); ?>; }
+        .comments { background-color: <?php echo get_theme_mod( 'wft_comments_color' ); ?>; }
     </style>
     <?php
 }

@@ -101,7 +101,7 @@ p {
 
 
 .tab-bar {
-    background: #53A93F;
+    background: #259b24;
 }
 
 .tab-bar-section > h1 {
@@ -425,6 +425,12 @@ ul.off-canvas-list li label {
 
 .socialmediabutton {
     
+}
+
+.button {
+    font-family: inherit;
+    background-color: #259b24;
+    border-color: #056f00;
 }
 
 @media only screen and (max-width: 40em) { 

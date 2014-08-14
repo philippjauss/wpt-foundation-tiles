@@ -38,6 +38,55 @@ $options = get_option('wft_theme_options');
                             <?php the_content();?>
                             
                         </div>
+                        
+                         <!-- share post -->                        
+                         <?php if ($options['share_google'] == 1 or 
+                                   $options['share_twitter'] == 1 or
+                                   $options['share_facebook'] == 1) { ?>
+                        
+                        <div class="sharearea">
+                            <div class="row">
+                                
+
+
+                             <?php if ($options['share_google'] == 1) { ?>
+                                <div class="small-4 large-4 columns text-center">
+                                    <!-- Fügen Sie dieses Tag an der Stelle ein, an der die Teilen-Schaltfläche erscheinen soll. -->
+                                    <div class="g-plus" data-action="share" data-annotation="vertical-bubble" data-height="60"></div>
+
+                                    <!-- Fügen Sie dieses Tag nach dem letzten Teilen-Tag ein. -->
+                                    <script type="text/javascript">
+                                          window.___gcfg = {lang: 'de'};
+
+                                          (function() {
+                                            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                                            po.src = 'https://apis.google.com/js/platform.js';
+                                            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                                          })();
+                                        </script>
+                                    </div>
+                             <?php } ?>
+
+                             <?php if ($options['share_twitter']==1) { ?>
+                                <div class="small-4 large-4 columns text-center">
+                                    <a href="https://twitter.com/share" class="twitter-share-button" data-lang="de" data-count="vertical">Twittern</a>
+                                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+                                            if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';
+                                                fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+                                    </script>
+                                </div>
+                             <?php } ?>
+                                
+                             <?php if ($options['share_facebook'] == 1) { ?>
+                                <div class="small-4 large-4 columns text-center">
+                                    <div class="fb-like" data-layout="box_count" data-action="like" data-show-faces="false" data-share="false"></div>
+                                </div>
+                             <?php } ?>                                
+                            
+                        </div>
+                        
+                        <?php } ?>                       
+                     </div>   
                         <div class="authorinfo singlepadding">
                             <h6>Über den Author</h6>
                             <div class="gravatarpic">
@@ -57,51 +106,12 @@ $options = get_option('wft_theme_options');
             
                         </div>
                         
-                        <!-- share post -->                        
-                         <?php if ($options['share_google'] == 1 or 
-                                   $options['share_facebook'] == 1) { ?>
-                        
-                        <div class="sharearea singlepadding">
-                            <div class="row">
-                                
-                             <?php if ($options['share_facebook'] == 1) { ?>
-                            <div class="small-4 large-4 columns">
-                            
-                                <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;width&amp;layout=box_count&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=65" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:65px;" allowTransparency="true"></iframe>
-                            
-                             <?php } ?>
-                            </div>
-                             <?php if ($options['share_google'] == 1) { ?>
-                                <div class="small-4 large-4 columns">
-                                <a href="https://twitter.com/share" class="twitter-share-button" data-lang="de" data-count="vertical">Twittern</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-                                </div>
-                                <div class="small-4 large-4 columns">
-                                        <!-- Fügen Sie dieses Tag an der Stelle ein, an der die Teilen-Schaltfläche erscheinen soll. -->
-                                        <div class="g-plus" data-action="share" data-annotation="vertical-bubble" data-height="60"></div>
 
-                                        <!-- Fügen Sie dieses Tag nach dem letzten Teilen-Tag ein. -->
-                                        <script type="text/javascript">
-                                          window.___gcfg = {lang: 'de'};
-
-                                          (function() {
-                                            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-                                            po.src = 'https://apis.google.com/js/platform.js';
-                                            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-                                          })();
-                                        </script>
-                                    </div>                                    
-                                
-                             <?php } ?>
-                            </div>
-                        </div>
-                        
-                        <?php } ?>
                         
                         <div class="postfooter">
                             
                         </div>
-                    </div>
+                    
                     <div class="singlenavigation singlepadding">
                         <h3>Navigation in den Beiträgen
                         </h3>

@@ -26,6 +26,19 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> >
+<?php $options = get_option('wft_theme_options');     ?>
+<?php if ($options['share_facebook'] == 1) { ?>    
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/de_DE/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<?php } ?>
+
 <div  class="off-canvas-wrap" data-offcanvas>
   <div class="inner-wrap">
     <nav class="tab-bar">
