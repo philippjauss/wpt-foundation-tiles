@@ -14,8 +14,8 @@
             triggerMasonry();               
          }); 
          
-        // trigger masonry on document ready
-        $(function(){
+        // trigger masonry on document load, after all images have been loaded
+        $(window).load(function(){
           $container = $('#container');
           triggerMasonry();
         });         
