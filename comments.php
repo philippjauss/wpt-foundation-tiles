@@ -73,16 +73,16 @@
                                     <?php if ($req): echo '(obligatorisch)'; endif; ?>
                             </label>
                             <input type="text" name="author" id="author"
-                                   value="<?php esc_attr_e(comment_author()); ?>"
+                                   value="<?php esc_attr_e($comment_author); ?>"
                                    size="22" tabindex="1" />
                         </p>
                         <p>
                             <label for="email">
-                                eMail (wird nicht veröffentlicht 
+                                eMail (wird nicht veröffentlicht) 
                                     <?php if ($req): echo ', obligatorisch'; endif; ?>
                             </label>
                             <input type="text" name="email" id="email"
-                                   value="<?php esc_attr_e(comment_author_email()); ?> "            
+                                   value="<?php esc_attr_e($comment_author_email); ?> "            
                                    size="22" tabindex="2" />
                         </p>
                         <p>
@@ -90,7 +90,7 @@
                                 Webseite
                             </label>
                             <input type="text" name="url" id="url"
-                                   value="<?php esc_attr_e(comment_author_url()); ?>"
+                                   value="<?php esc_attr_e($comment_author_url); ?>"
                                    size="22" tabindex="3" />
                         </p>
                     <?php endif; // is_user_logged_in() ?>
